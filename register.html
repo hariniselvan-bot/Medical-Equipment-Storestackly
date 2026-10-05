@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | STACKLY</title>
+<meta name="description" content="Register for a STACKLY customer or seller account.">
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a href="index.html" class="auth-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>Back to site</a>
+<div class="auth-page">
+  <div class="auth-visual">
+    <div class="av-bg"><img src="img/backgrounds/auth-side.webp" data-eager width="1080" height="1350" alt="STACKLY monitoring equipment in a dark clinical environment"></div>
+    <svg class="av-ecg" viewBox="0 0 600 70" preserveAspectRatio="none"><path d="M0 35 H120 l14-11 12 16 10-34 14 50 12-32 10 11 h110 l12-9 14 17 9-27 12 37 10-20 9 9 H600"/></svg>
+    <div class="av-top"><a href="index.html" class="auth-logo-link" aria-label="Stackly Medical home"><img src="img/logo.webp" class="auth-logo" alt="Stackly Medical"></a></div>
+    <div class="av-bottom av-quote">
+      <span class="eyebrow light">Join STACKLY</span>
+      <h2>One account for orders, service and support.</h2>
+      <p>Customers track orders and invoices; sellers manage catalogs and revenue. Choose your account type below.</p>
+      <div class="av-stats">
+        <div><b>500+</b><span>Partner organizations</span></div>
+        <div><b>40+</b><span>Countries</span></div>
+        <div><b>48h</b><span>Dispatch time</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="auth-panel">
+    <div class="auth-card" data-aos="fade-up">
+      <div class="auth-head">
+        <span class="eyebrow">Create Account</span>
+        <h1>Register with STACKLY</h1>
+        <p class="auth-sub">Already registered? <a href="login.html">Sign in</a></p>
+      </div>
+      <form id="registerForm" novalidate>
+        <div class="role-select">
+          <div class="role-opt">
+            <input type="radio" name="account" id="accUser" value="user" checked>
+            <label for="accUser"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>User</label>
+          </div>
+          <div class="role-opt">
+            <input type="radio" name="account" id="accSeller" value="seller">
+            <label for="accSeller"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>Seller</label>
+          </div>
+        </div>
+        <div class="field"><label for="regName">Full Name</label><input id="regName" type="text" required placeholder="Dr. Jane Smith"><span class="error-msg">Please enter your full name.</span></div>
+        <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:0 16px">
+          <div class="field"><label for="regEmail">Email</label><input id="regEmail" type="email" required placeholder="you@hospital.org"><span class="error-msg">Enter a valid email.</span></div>
+          <div class="field"><label for="regPhone">Phone</label><input id="regPhone" type="tel" required data-min="7" placeholder="+1 555 010 2244"><span class="error-msg">Enter a valid phone.</span></div>
+        </div>
+        <div class="field"><label for="regPassword">Password</label>
+          <div class="input-wrap"><input id="regPassword" type="password" required data-min="8" placeholder="Minimum 8 characters"><button type="button" class="pw-toggle" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+          <div class="pw-meter" data-level="0"><i></i><i></i><i></i><i></i></div>
+          <p class="pw-hint">Use 8+ characters with mixed case, numbers &amp; symbols.</p>
+          <span class="error-msg">Password must be at least 8 characters.</span>
+        </div>
+        <div class="field"><label for="regConfirm">Confirm Password</label>
+          <div class="input-wrap"><input id="regConfirm" type="password" required placeholder="Repeat your password"><button type="button" class="pw-toggle" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+          <span class="error-msg">Passwords do not match.</span>
+        </div>
+        <button type="submit" class="btn btn-primary auth-btn">Create Account <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+        <p class="auth-switch" style="margin-top:22px">By registering you agree to our <a href="404.html">Terms</a> and <a href="404.html">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>if(window.AOS){AOS.init({once:true,duration:800,easing:'ease-out-cubic'});}
+if(window.gsap){gsap.fromTo('.auth-visual .av-bg img',{scale:1.1,opacity:0},{scale:1,opacity:.9,duration:1.6,ease:'power3.out'});
+var p=document.querySelector('.av-ecg path');if(p){var l=p.getTotalLength();p.style.strokeDasharray=l;p.style.strokeDashoffset=l;gsap.to(p,{strokeDashoffset:0,duration:2.2,ease:'power2.inOut',delay:.4});}}</script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* ============================================================
+   STACKLY — animations.css : keyframes & motion utilities
+   ============================================================ */
+
+@keyframes drift{
+  0%,100%{transform:translate(0,0)}
+  33%{transform:translate(14px,-22px)}
+  66%{transform:translate(-10px,-8px)}
+}
+@keyframes cueDrop{
+  0%{transform:scaleY(0);transform-origin:top}
+  45%{transform:scaleY(1);transform-origin:top}
+  55%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+@keyframes hhSlide{
+  0%{transform:translateX(-100%)}
+  60%,100%{transform:translateX(100%)}
+}
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+@keyframes blink{
+  0%,100%{opacity:1}
+  50%{opacity:.25}
+}
+@keyframes pinPulse{
+  0%{transform:translateX(-50%) scale(.6);opacity:.9}
+  100%{transform:translateX(-50%) scale(2.4);opacity:0}
+}
+@keyframes floatY{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-14px)}
+}
+@keyframes ecgDash{
+  to{stroke-dashoffset:0}
+}
+@keyframes flatPulse{
+  0%,100%{transform:scaleY(1)}
+  12%{transform:scaleY(1.7)}
+  24%{transform:scaleY(.6)}
+  36%{transform:scaleY(1.25)}
+  56%{transform:scaleY(1)}
+}
+@keyframes gradShift{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* floating hero cards */
+.fc-1{animation:floatY 7s ease-in-out infinite}
+.fc-2{animation:floatY 8.5s ease-in-out .8s infinite}
+.fc-3{animation:floatY 7.6s ease-in-out .4s infinite}
+.tvc-chip{animation:floatY 6.5s ease-in-out infinite}
+.tvc-chip.c2{animation-delay:1.2s}
+
+/* 404 pulse bars */
+.pulse-bars{display:flex;align-items:center;gap:5px;height:52px}
+.pulse-bars i{width:5px;border-radius:4px;background:linear-gradient(var(--cyan),var(--teal));height:100%;transform-origin:center;animation:flatPulse 1.6s ease-in-out infinite}
+.pulse-bars i:nth-child(2){animation-delay:.1s}
+.pulse-bars i:nth-child(3){animation-delay:.2s}
+.pulse-bars i:nth-child(4){animation-delay:.3s}
+.pulse-bars i:nth-child(5){animation-delay:.4s}
+.pulse-bars i:nth-child(6){animation-delay:.5s}
+.pulse-bars i:nth-child(7){animation-delay:.6s}
+
+/* data-point ping used on tech image chips */
+.dot-ping{position:relative}
+.dot-ping::after{
+  content:"";position:absolute;inset:-4px;border-radius:50%;
+  border:1.5px solid var(--cyan);animation:pinPulse2 1.8s ease-out infinite;
+}
+@keyframes pinPulse2{
+  0%{transform:scale(.5);opacity:1}
+  100%{transform:scale(1.8);opacity:0}
+}
+
+/* gradient border glow on hover for spotlight cards */
+.spot-card{position:relative}
+.spot-card::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;opacity:0;transition:opacity .5s;pointer-events:none;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(25,184,209,.16),transparent 65%);
+}
+.spot-card:hover::after{opacity:1}
+
+/* subtle animated gradient for dark section headings */
+.grad-animate{
+  background:linear-gradient(100deg,var(--teal) 20%,var(--cyan) 45%,var(--aqua) 60%,var(--teal) 85%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:gradShift 7s ease infinite;
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}

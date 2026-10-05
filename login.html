@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In | STACKLY</title>
+<meta name="description" content="Secure access to your STACKLY equipment portal.">
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a href="index.html" class="auth-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>Back to site</a>
+<div class="auth-page">
+  <div class="auth-visual">
+    <div class="av-bg"><img src="img/backgrounds/auth-side.webp" data-eager width="1080" height="1350" alt="STACKLY monitoring equipment in a dark clinical environment"></div>
+    <svg class="av-ecg" viewBox="0 0 600 70" preserveAspectRatio="none"><path d="M0 35 H120 l14-11 12 16 10-34 14 50 12-32 10 11 h110 l12-9 14 17 9-27 12 37 10-20 9 9 H600"/></svg>
+    <div class="av-top"><a href="index.html" class="auth-logo-link" aria-label="Stackly Medical home"><img src="img/logo.webp" class="auth-logo" alt="Stackly Medical"></a></div>
+    <div class="av-bottom av-quote">
+      <span class="eyebrow light">Secure Access</span>
+      <h2>Your equipment fleet, one secure sign-in away.</h2>
+      <p>Track orders, open support tickets, review telemetry and manage documentation for every STACKLY device in your facility.</p>
+      <div class="av-stats">
+        <div><b>10,000+</b><span>Devices connected</span></div>
+        <div><b>99.98%</b><span>Portal uptime</span></div>
+        <div><b>24/7</b><span>Support access</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="auth-panel">
+    <div class="auth-card" data-aos="fade-up">
+      <div class="auth-head">
+        <span class="eyebrow">Welcome Back</span>
+        <h1>Sign in to STACKLY</h1>
+        <p class="auth-sub">New here? <a href="register.html">Create an account</a></p>
+      </div>
+      <form id="loginForm" novalidate>
+        <div class="role-select">
+          <div class="role-opt">
+            <input type="radio" name="role" id="roleUser" value="user" checked>
+            <label for="roleUser"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>User</label>
+          </div>
+          <div class="role-opt">
+            <input type="radio" name="role" id="roleAdmin" value="admin">
+            <label for="roleAdmin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.6 8-10V5.5L12 2 4 5.5V12c0 6.4 8 10 8 10Z"/></svg>Admin</label>
+          </div>
+        </div>
+        <div class="field"><label for="lEmail">Email</label><input id="lEmail" type="email" required placeholder="you@hospital.org"><span class="error-msg">Please enter a valid email address.</span></div>
+        <div class="field"><label for="lPass">Password</label>
+          <div class="input-wrap"><input id="lPass" type="password" required data-min="6" placeholder="••••••••"><button type="button" class="pw-toggle" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+          <span class="error-msg">Password must be at least 6 characters.</span>
+        </div>
+        <div class="auth-row">
+          <label><input type="checkbox" checked>Remember me</label>
+          <a href="404.html">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary auth-btn">Sign In <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+        <div class="auth-divider">OR</div>
+        <p class="auth-switch">Procurement team? <a href="contact.html">Contact sales for access</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>if(window.AOS){AOS.init({once:true,duration:800,easing:'ease-out-cubic'});}
+if(window.gsap){gsap.fromTo('.auth-visual .av-bg img',{scale:1.1,opacity:0},{scale:1,opacity:.9,duration:1.6,ease:'power3.out'});
+var p=document.querySelector('.av-ecg path');if(p){var l=p.getTotalLength();p.style.strokeDasharray=l;p.style.strokeDashoffset=l;gsap.to(p,{strokeDashoffset:0,duration:2.2,ease:'power2.inOut',delay:.4});}}</script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/components.js"></script>
+</body>
+</html>

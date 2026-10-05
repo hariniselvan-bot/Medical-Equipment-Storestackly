@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Consultation, Installation, Maintenance | STACKLY</title>
+<meta name="description" content="Equipment consultation, installation, maintenance, 24/7 support, hospital setup and training.">
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="preloader" aria-hidden="true">
+  <div class="preloader-cols"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="preloader-inner">
+    <div class="preloader-logo">
+      <svg class="pl-mark" viewBox="0 0 48 48"><defs><linearGradient id="plg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#087C78"/><stop offset="1" stop-color="#19B8D1"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><path d="M31.5 16.6c-1.6-2.1-4.4-3.3-7.5-3.3-4.5 0-7.7 2.3-7.7 5.9 0 8.3 16.3 4.4 16.3 9.9 0 3.1-3.4 5.6-8 5.6-3.6 0-6.7-1.5-8.3-3.9" fill="none" stroke="url(#plg)" stroke-width="4.6" stroke-linecap="round"/><circle cx="33.8" cy="33.4" r="2.6" fill="#19B8D1"/></svg>
+      <span class="pl-word">STACKLY</span>
+    </div>
+    <svg class="preloader-ecg" viewBox="0 0 420 64"><path d="M0 32 H96 l12-10 10 14 8-30 12 44 10-26 8 8 h54 l10-8 12 16 8-24 10 18 8-6 H420"/></svg>
+    <div class="preloader-meta"><span>Initializing systems</span><span class="preloader-count" data-count>0%</span></div>
+  </div>
+</div>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<header class="site-header">
+  <div class="container header-inner">
+<a href="index.html" class="brand" aria-label="STACKLY home">
+    <img
+        src="img/logo.webp"
+        alt="STACKLY Medical Systems"
+        class="brand-logo"
+    >
+</a>    <nav class="main-nav" aria-label="Primary">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="service.html">Services</a>
+      <a class="nav-link" href="blog.html">Blog</a>
+      <a class="nav-link" href="pricing.html">Pricing</a>
+      <a class="nav-link" href="faq.html">FAQ</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" data-search-open aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+      <a href="login.html" class="btn btn-primary btn-sm header-login">Login</a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <div class="mm-header">
+    <a href="index.html" class="mm-brand" aria-label="STACKLY home"><img src="img/logo.webp" alt="STACKLY Medical Systems"></a>
+    <button class="mm-close" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav aria-label="Mobile">
+    <a class="mm-link" href="index.html"><small>01</small>Home</a>
+    <a class="mm-link" href="about.html"><small>02</small>About</a>
+    <a class="mm-link" href="service.html"><small>03</small>Services</a>
+    <a class="mm-link" href="blog.html"><small>04</small>Blog</a>
+    <a class="mm-link" href="pricing.html"><small>05</small>Pricing</a>
+    <a class="mm-link" href="faq.html"><small>06</small>FAQ</a>
+  </nav>
+  <div class="mm-foot">
+    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    <a href="contact.html" class="btn btn-outline-light btn-sm">Contact Sales</a>
+  </div>
+</div>
+<div class="search-overlay" role="dialog" aria-label="Search">
+  <button class="search-close" aria-label="Close search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <div class="search-box">
+    <label>Search STACKLY</label>
+    <div class="search-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" placeholder="Equipment, solutions, support…">
+    </div>
+    <div class="search-tags">
+      <a href="index.html#products">Patient Monitors</a>
+      <a href="index.html#products">Ventilators</a>
+      <a href="service.html">Installation</a>
+      <a href="pricing.html">Service Plans</a>
+      <a href="blog.html">Research</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><i>/</i><span>Services</span></nav>
+      <h1><span class="mask-line"><span>Services built for</span></span>
+          <span class="mask-line"><span><span class="accent">clinical reality</span></span></span></h1>
+      <p>Consultation, installation, maintenance, support, hospital programs and training — one accountable partner for the full equipment lifecycle.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="svc-detail reveal">
+        <div class="sd-img img-reveal"><img src="img/blog/maintenance.webp" width="880" height="587" alt="Technician performing equipment consultation and inspection"></div>
+        <div>
+          <span class="eyebrow">01 — Consultation</span>
+          <h3>Healthcare Equipment Consultation</h3>
+          <p>Before you spend a dollar, our clinical engineers study your departments, patient volumes and care pathways to specify exactly what you need — and nothing you don&rsquo;t.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Department-by-department needs analysis</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Budget-phased procurement roadmaps</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Regulatory and compliance guidance</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm">Request Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-detail reveal">
+        <div class="sd-img img-reveal"><img src="img/products/surgical-light.webp" width="880" height="587" alt="Surgical lighting installation in an operating room"></div>
+        <div>
+          <span class="eyebrow">02 — Installation</span>
+          <h3>Installation &amp; Commissioning</h3>
+          <p>Certified technicians install, calibrate and validate every device against manufacturer specifications and local regulation — with documented handover to your biomedical team.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Site preparation and power assessment</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Calibration certificates for every unit</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Network and EMR integration</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm">Plan an Installation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-detail reveal">
+        <div class="sd-img img-reveal"><img src="img/categories/icu.webp" width="880" height="587" alt="ICU ventilator under maintenance program"></div>
+        <div>
+          <span class="eyebrow">03 — Maintenance</span>
+          <h3>Preventive Maintenance</h3>
+          <p>Scheduled service programs with genuine parts, remote telemetry diagnostics and guaranteed response windows that keep your fleet above 99.9% uptime.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Remote fault prediction via telemetry</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Genuine parts, 10-year availability</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>SLA-backed response times</li>
+          </ul>
+          <a href="pricing.html" class="btn btn-ghost btn-sm">See Service Plans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-detail reveal">
+        <div class="sd-img img-reveal"><img src="img/categories/monitoring.webp" width="880" height="587" alt="Patient monitor technical support"></div>
+        <div>
+          <span class="eyebrow">04 — Support</span>
+          <h3>Technical Support, 24/7</h3>
+          <p>When a device matters at 3 a.m., you reach a biomedical engineer — not a script. Six languages, four regional desks, one promise: we stay until it works.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>24/7 engineer-staffed hotline</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Remote diagnostics and screen-share</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Loaner units during repairs</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm">Contact Support <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-detail reveal">
+        <div class="sd-img img-reveal"><img src="img/categories/furniture.webp" width="880" height="587" alt="Complete hospital room setup"></div>
+        <div>
+          <span class="eyebrow">05 — Hospital Solutions</span>
+          <h3>Complete Hospital Setup</h3>
+          <p>From a single ward renovation to a greenfield hospital: room planning, equipment logistics, installation and commissioning under a single contract and a single point of accountability.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Room-by-room equipment planning</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Consolidated shipping and customs</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Commissioning and staff handover</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm">Start a Project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="svc-detail reveal">
+        <div class="sd-img img-reveal"><img src="img/products/ultrasound.webp" width="880" height="587" alt="Ultrasound training session"></div>
+        <div>
+          <span class="eyebrow">06 — Training</span>
+          <h3>Equipment Training</h3>
+          <p>Hands-on clinical training at your facility, with certification for operators and biomedical staff — refreshed whenever software or protocols evolve.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>On-site clinical application training</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Biomedical engineer certification</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>E-learning portal access included</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm">Book Training <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" style="background:var(--gray)">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow centered">How We Work</span>
+        <h2 class="section-title">A process with <span class="accent">no surprises</span></h2>
+      </div>
+      <div class="process-steps" data-reveal-group>
+        <div class="pstep"><h4>Discover</h4><p>We map your departments, volumes and constraints in a structured on-site assessment.</p></div>
+        <div class="pstep"><h4>Design</h4><p>A phased equipment and service plan with transparent pricing and timelines.</p></div>
+        <div class="pstep"><h4>Deliver</h4><p>Consolidated logistics, certified installation and documented commissioning.</p></div>
+        <div class="pstep"><h4>Sustain</h4><p>Training, telemetry-monitored maintenance and 24/7 support for the long run.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-sec">
+    <div class="cta-bg"><img src="img/backgrounds/cta-bg.webp" width="1600" height="900" alt=""></div>
+    <div class="container cta-inner reveal">
+      <span class="eyebrow light centered">Get Started</span>
+      <h2>Tell us what your team needs next</h2>
+      <p>A clinical engineer will respond within one business day with next steps.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-light">Contact Our Team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        <a href="pricing.html" class="btn btn-outline-light">View Service Plans</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h3>Let&rsquo;s build better healthcare <span class="grad-text">together.</span></h3>
+      <div class="hero-actions">
+        <a href="index.html#products" class="btn btn-primary">Explore Equipment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        <a href="contact.html" class="btn btn-outline-light">Contact Our Team</a>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+<a href="index.html" class="brand" aria-label="STACKLY home">
+    <img
+        src="img/logo.webp"
+        alt="STACKLY Medical Systems"
+        class="brand-logo"
+    >
+</a>        <p>Precision medical equipment and healthcare solutions trusted by hospitals, clinics and care teams in more than 40 countries.</p>
+        <div class="social-row">
+          <a href="404.html" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56Z"/></svg></a>
+          <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8.2h2.75l.41-3.2H13.5V7.56c0-.93.26-1.56 1.58-1.56h1.7V3.14A22.7 22.7 0 0 0 14.31 3c-2.44 0-4.11 1.49-4.11 4.23v2.37H7.44v3.2h2.76V21Z"/></svg></a>
+          <a href="404.html" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.76 2.76 0 0 0-1.94-1.95C17.95 4.8 12 4.8 12 4.8s-5.95 0-7.66.45A2.76 2.76 0 0 0 2.4 7.2 28.8 28.8 0 0 0 2 12a28.8 28.8 0 0 0 .4 4.8 2.76 2.76 0 0 0 1.94 1.95c1.71.45 7.66.45 7.66.45s5.95 0 7.66-.45a2.76 2.76 0 0 0 1.94-1.95A28.8 28.8 0 0 0 22 12a28.8 28.8 0 0 0-.4-4.8ZM10 15.1V8.9l5.27 3.1Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+<h5>Company</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="index.html#categories">Patient Monitoring</a></li>
+          <li><a href="index.html#categories">Diagnostic Equipment</a></li>
+          <li><a href="index.html#categories">Surgical Equipment</a></li>
+          <li><a href="index.html#categories">ICU Equipment</a></li>
+        </ul>
+      </div>
+     <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="404.html">Patient Monitoring</a></li>
+          <li><a href="404.html">Diagnostic Equipment</a></li>
+          <li><a href="404.html">Surgical Equipment</a></li>
+          <li><a href="404.html">ICU Equipment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="404.html">Blog</a></li>
+          <li><a href="404.html">FAQ</a></li>
+          <li><a href="404.html">Support</a></li>
+          <li><a href="404.html">Documentation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms</a></li>
+          <li><a href="404.html">Cookie Policy</a></li>
+          <li><a href="404.html">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> STACKLY Medical Systems. All rights reserved.</span>
+      <div class="fb-links">
+        <a href="404.html">Privacy</a><a href="404.html">Terms</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>if(window.AOS){AOS.init({once:true,offset:70,duration:850,easing:'ease-out-cubic'});}</script>
+<script src="js/preloader.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/header.js"></script>
+<script src="js/main.js"></script>
+<script src="js/components.js"></script>
+
+</body>
+</html>
