@@ -1475,7 +1475,15 @@ document.addEventListener('DOMContentLoaded', function() {
   object-fit:contain !important;
   object-position:left center !important;
   margin:0 !important;
-  filter:brightness(0) invert(1) !important;
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(14%)
+    sepia(78%)
+    saturate(1844%)
+    hue-rotate(340deg)
+    brightness(83%)
+    contrast(99%) !important;
 }
 
 .dashboard-brand strong{
@@ -2331,8 +2339,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="dashboard-section" data-page="clients">
   <div class="section-heading">
     <div><h2>AI Assistants</h2><p>Manage AI assistants, saved workflows and usage.</p></div>
-    <button class="heading-action">+ Add assistant</button>
-  </div>
+<button class="heading-action" onclick="window.location.href='404.html'">
+    + Add assistant
+</button>  </div>
   <div class="dashboard-subgrid">
 <div class="card mini-panel"><h3>Total AI assistants</h3><strong>1,284</strong><span>All assistants</span><b class="up">↑ 12.4%</b></div>
 <div class="card mini-panel"><h3>New assistants</h3><strong>86</strong><span>Added this month</span><b class="up">↑ 18.1%</b></div>
@@ -2567,7 +2576,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const overlay = document.getElementById("dashboardOverlay");
   const signOutButton = document.getElementById("signOutButton");
 
-  function setSupportMenu(open){
+  function setMobileMenu(open){
     sidebar.classList.toggle("open", open);
     mobileMenu.classList.toggle("is-open", open);
     mobileMenu.textContent = open ? "×" : "☰";
@@ -2575,18 +2584,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if(!open) overlay.style.display = "";
   }
 
-  mobileMenu.addEventListener("click", function(event){
-    event.preventDefault();
-    event.stopPropagation();
-    setSupportMenu(!sidebar.classList.contains("open"));
+  mobileMenu.addEventListener("click", function(){
+    setMobileMenu(!sidebar.classList.contains("open"));
   });
 
   overlay.addEventListener("click", function(){
-    setSupportMenu(false);
+    setMobileMenu(false);
   });
 
   window.addEventListener("resize", function(){
-    if(window.innerWidth > 760) setSupportMenu(false);
+    if(window.innerWidth > 760) setMobileMenu(false);
   });
 
   signOutButton.addEventListener("click", function(){
@@ -2784,14 +2791,22 @@ document.addEventListener('DOMContentLoaded', function() {
 })();
 </script>
 
+
+<script id="heading-action-404-routing">
+document.addEventListener("click", function (event) {
+  const button = event.target.closest(".heading-action");
+  if (!button) return;
+  event.preventDefault();
+  event.stopPropagation();
+  window.location.href = "404.html";
+});
+</script>
 </body>
 </html>
-<style id="stackly-logo-pure-white">
-.dashboard-brand-mark.stackly-dashboard-logo,
-.dashboard-brand-mark.stackly-dashboard-logo img,
-.stackly-dashboard-logo {
-  filter: brightness(0) invert(1) !important;
-  opacity: 1 !important;
+
+<style id="stackly-white-logo-override">
+.dashboard-brand-mark.stackly-dashboard-logo{
+  filter:brightness(0) invert(1) !important;
 }
 </style>
 <style id="stackly-medical-theme">
